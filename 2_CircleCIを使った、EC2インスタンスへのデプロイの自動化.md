@@ -33,9 +33,9 @@ CircleCIプロジェクトの`Project Setting`の「SSH Keys」メニューへ�
 Hostnameには `EC2`、Private Keyには 以下のコマンドをEC2ターミナルで実行した結果表示（秘密鍵情報）を貼り付ける。
 
 ```
+(EC2)
 cat ~/.ssh/id_rsa
 ```
-
 
 ## 3. CircleCI に環境変数を設定
 
@@ -134,6 +134,7 @@ workflows:
 ## Git/Github
 
 ```
+(C9)
 git add .
 git commit -m "CircleCIでEC2インスタンスへの自動デプロイ設定完了"
 git log
@@ -153,6 +154,7 @@ h1 {
 
 Git/Github
 ```
+(C9)
 git add .
 git commit -m "CSS修正"
 git push origin main
