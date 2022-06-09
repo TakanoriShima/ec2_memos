@@ -111,11 +111,12 @@ jobs:
   #EC2 deploy
   deploy:
     machine:
-      image: circleci/classic:edge
+      docker: # executor type
+        - image: cimg/base:stable
     steps:
       - checkout
       - add_ssh_keys:
-      - run: ssh ${USER_NAME}@${HOST_NAME} 'cd /var/www/html/schedule_app/ && git pull origin main'
+      - run: ssh ${USER_NAME}@${HOST_NAME} 'cd /var/www/html/new_case_work/ && git pull origin main'
  
 workflows:
   version: 2
